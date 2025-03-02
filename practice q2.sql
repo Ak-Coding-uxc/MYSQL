@@ -1,0 +1,33 @@
+CREATE DATABASE practice;
+
+USE practice;
+
+CREATE TABLE question2(
+name VARCHAR(20),
+marks INT NOT NULL,
+grades VARCHAR(10)
+);
+
+INSERT INTO question2 
+VALUES
+("Bob",68,'C'),
+('Jason',78,'B'),
+('Eve',88,'A')
+;
+
+SELECT * FROM question2;
+
+ALTER TABLE quEstion2
+CHANGE COLUMN name full_name VARCHAR(20);
+
+ALTER TABLE question2
+DROP COLUMN grades; # COLUMN DELETE (ALTER USED TO DELETE SCHEMA)// SCHEMA MEANS DESIGN OF TABLE.
+
+DELETE FROM question2
+WHERE marks < 80;# ROW DATA DELETE
+
+SET SQL_SAFE_UPDATES = 0;
+
+
+
+
